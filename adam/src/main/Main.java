@@ -1,12 +1,9 @@
 package main;
 
-import data.animal.Cat;
-import data.human.Human;
-import logic.Menu;
-
+import logic.MenuHuman;
 public class Main {
 
     public static void main(String[] args) {
-        Menu.menu();
+        MenuHuman.menu();
     }
 }

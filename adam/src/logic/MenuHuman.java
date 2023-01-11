@@ -3,32 +3,29 @@ package logic;
 import data.Creature;
 import data.animal.Animal;
 import data.animal.Cat;
+import data.animal.Dog;
 import data.human.Human;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Menu {
+public class MenuHuman {
     private static ArrayList<Creature> creatureArrayList = new ArrayList<>();
-    private static Scanner scanner = new Scanner(System.in);
-    private static ArrayList<Animal> petList = new ArrayList<>();
 
-    public static void menu() {
+    private static ArrayList<Animal> petList = new ArrayList<>();
+    String userChose = "";
+    public  void menu() {
         while (true) {
-            System.out.println("MENU GLOWNE PROGRAMU");
-            System.out.println("1 - tworzenie ludzi");
-            System.out.println("2 - tworzenie kotow");
-            System.out.println("3 - tworzenie psow");
-            System.out.println("4 - tworzenie zolwi");
-            System.out.println("5 - wyswietl liste");
-            System.out.println("6 - usuwanie z listy");
-            System.out.println("7 - przypisywanie wlascicieli zwierzetom");
-            System.out.println("0 - KONIEC");
-            int y = scanner.nextInt();
-            scanner.nextLine();
-            switch (y) {
+            System.out.println("MENU ");
+            System.out.println("1 - Ewidencja wlascicieli ");
+            System.out.println("2 - Ewidencja zwierzat ");
+            System.out.println("3 - KONIEC");
+
+            userChose = UserInteraction.getString();
+
+            switch (userChose) {
                 case 1:
-                    System.out.println("tworzenie ludzi");
+                    System.out.println("Ewidencja wlascicieli ");
                     Human.add(creatureArrayList);
                     enterPress();
                     break;
@@ -39,10 +36,14 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("tworzenie psow");
+                    Dog.add(creatureArrayList);
                     enterPress();
                     break;
                 case 4:
                     System.out.println("tworzenie zolwi");
+
+
+
                     enterPress();
                     break;
                 case 5:

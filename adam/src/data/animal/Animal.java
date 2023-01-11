@@ -6,7 +6,7 @@ import data.human.Human;
 import java.util.Scanner;
 
 public abstract class Animal extends Creature {
-private Human owner = new Human();
+private Human owner;
 
     public Animal() {
     }
@@ -33,5 +33,6 @@ private Human owner = new Human();
 
     public void setOwner(Human owner) {
         this.owner = owner;
+        owner.getAnimalList().add(this);
     }
 }

@@ -2,13 +2,14 @@ package data.human;
 
 import data.Creature;
 import data.animal.Animal;
-import data.animal.Cat;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Human extends Creature {
     private String lastName;
+    private List<Animal> animalList = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public Human() {
@@ -18,6 +19,8 @@ public class Human extends Creature {
         super(name, age, gender);
         this.lastName = lastName;
     }
+
+
 
     @Override
     public String toString() {
@@ -51,4 +54,7 @@ public class Human extends Creature {
 
     }
 
+    public List<Animal> getAnimalList() {
+        return animalList;
+    }
 }
